@@ -1,4 +1,6 @@
 package za.ac.nwu.ac.logic.flow.impl;
 
-public class FetchAccountTransactionFlowImpl {// implements FetchAccountTransactionFlow {
+import za.ac.nwu.ac.logic.flow.FetchAccountTransactionFlow;
+
+public class FetchAccountTransactionFlowImpl  implements FetchAccountTransactionFlow {
 }

@@ -11,8 +11,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-//import org.springframework.transaction.annotation.Transactional;
-
 @Transactional
 @Component
 
@@ -34,15 +32,16 @@ public class FetchAccountTypeFlowImpl implements FetchAccountTypeFlow {
         accountTypeDtos.add(new AccountTypeDto("MILES", "Miles", LocalDate.now()));
         return accountTypeDtos;
     }
+
     public boolean MethodToTest() {
         return true;
     }
 }
-
- /*
+/*
     public AccountTypeDto getTypeByMnemonic(String mnemonic) {
         return accountTypeTranslator.getAccountTypeDtoByMnemonic(mnemonic);
     }
+
 
 @Override
     public List<AccountTypeDto> getAllAccountTypes()
