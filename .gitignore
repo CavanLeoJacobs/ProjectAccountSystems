@@ -1,0 +1,6 @@
+# Project exclude paths
+/AccountSystemsDomain/target/
+/AccountSystemsLogic/target/
+/AccountSystemsRepository/target/
+/AccountSystemsSpringBoot/target/
+/AccountSystemsTranslator/target/

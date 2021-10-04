@@ -1,0 +1,209 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Main</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">draftMain.classes</a>
+</div>
+
+<h1>Coverage Summary for Class: Main (draftMain.classes)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Main</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    50%
+  </span>
+  <span class="absValue">
+    (1/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    90%
+  </span>
+  <span class="absValue">
+    (9/10)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package draftMain.classes;
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import java.util.Scanner;
+<i class="no-highlight">4</i>&nbsp;
+<i class="no-highlight">5</i>&nbsp;
+<b class="nc"><i class="no-highlight">6</i>&nbsp;public class Main {</b>
+<i class="no-highlight">7</i>&nbsp;    public static void main(String[] args) {
+<i class="no-highlight">8</i>&nbsp;
+<i class="no-highlight">9</i>&nbsp;
+<b class="fc"><i class="no-highlight">10</i>&nbsp;        Scanner KeyBoardInput = new Scanner(System.in);</b>
+<b class="fc"><i class="no-highlight">11</i>&nbsp;        AccountStatus accountStatus = new AccountStatus();</b>
+<b class="fc"><i class="no-highlight">12</i>&nbsp;        Calculations calculations = new Calculations();</b>
+<b class="fc"><i class="no-highlight">13</i>&nbsp;        RewardVoucherStore VoucherStore = new RewardVoucherStore();</b>
+<i class="no-highlight">14</i>&nbsp;
+<i class="no-highlight">15</i>&nbsp;
+<b class="fc"><i class="no-highlight">16</i>&nbsp;        String[] Shop_by_category_array = {&quot;Coffees&quot;, &quot;12&quot;, &quot;3&quot;, &quot;3&quot;, &quot;4&quot;, &quot;55&quot;, &quot;2&quot;};</b>
+<i class="no-highlight">17</i>&nbsp;
+<b class="fc"><i class="no-highlight">18</i>&nbsp;        int Category_Counter =  Shop_by_category_array.length;</b>
+<i class="no-highlight">19</i>&nbsp;
+<i class="no-highlight">20</i>&nbsp;
+<i class="no-highlight">21</i>&nbsp;
+<b class="fc"><i class="no-highlight">22</i>&nbsp;        for (int i=0 ;i&lt;Category_Counter;i++)</b>
+<i class="no-highlight">23</i>&nbsp;        {
+<b class="fc"><i class="no-highlight">24</i>&nbsp;            System.out.println(Shop_by_category_array[i]);</b>
+<i class="no-highlight">25</i>&nbsp;
+<i class="no-highlight">26</i>&nbsp;
+<i class="no-highlight">27</i>&nbsp;        }
+<i class="no-highlight">28</i>&nbsp;
+<b class="fc"><i class="no-highlight">29</i>&nbsp;        System.out.print(&quot;select an option\n&quot;);</b>
+<i class="no-highlight">30</i>&nbsp;        //String selected_option = KeyBoardInput.next();
+<i class="no-highlight">31</i>&nbsp;      //  VoucherStore.category(selected_option);
+<i class="no-highlight">32</i>&nbsp;
+<i class="no-highlight">33</i>&nbsp;
+<i class="no-highlight">34</i>&nbsp;
+<i class="no-highlight">35</i>&nbsp;    }
+<i class="no-highlight">36</i>&nbsp;}
+<i class="no-highlight">37</i>&nbsp;      /*
+<i class="no-highlight">38</i>&nbsp;        System.out.print(&quot;are you a new member(1=y,0=n)\n&quot;);
+<i class="no-highlight">39</i>&nbsp;        int restart = KeyBoardInput.nextInt();
+<i class="no-highlight">40</i>&nbsp;
+<i class="no-highlight">41</i>&nbsp;
+<i class="no-highlight">42</i>&nbsp;            if (restart == 1)
+<i class="no-highlight">43</i>&nbsp;            {
+<i class="no-highlight">44</i>&nbsp;                accountStatus.NewMemberSetter();
+<i class="no-highlight">45</i>&nbsp;            }
+<i class="no-highlight">46</i>&nbsp;            else if (restart == 0)
+<i class="no-highlight">47</i>&nbsp;            {
+<i class="no-highlight">48</i>&nbsp;                accountStatus.MemberGetter(accountStatus.getHaveMILES(), accountStatus.getHavePLAYS());
+<i class="no-highlight">49</i>&nbsp;                int HaveMILES=accountStatus.getHaveMILES();
+<i class="no-highlight">50</i>&nbsp;                int HavePLAYS=accountStatus.getHavePLAYS();
+<i class="no-highlight">51</i>&nbsp;               int ModifyMILES=10;
+<i class="no-highlight">52</i>&nbsp;               int ModifyPLAYS=0;
+<i class="no-highlight">53</i>&nbsp;
+<i class="no-highlight">54</i>&nbsp;                if(ModifyMILES&gt;0 )
+<i class="no-highlight">55</i>&nbsp;                {
+<i class="no-highlight">56</i>&nbsp;                    HaveMILES=calculations.Added(ModifyMILES,0);
+<i class="no-highlight">57</i>&nbsp;                }
+<i class="no-highlight">58</i>&nbsp;                 if (ModifyPLAYS&gt;0)
+<i class="no-highlight">59</i>&nbsp;                {
+<i class="no-highlight">60</i>&nbsp;                    HavePLAYS=calculations.Added(0,ModifyPLAYS);
+<i class="no-highlight">61</i>&nbsp;                }
+<i class="no-highlight">62</i>&nbsp;
+<i class="no-highlight">63</i>&nbsp;
+<i class="no-highlight">64</i>&nbsp;                if(ModifyMILES&lt;0 )
+<i class="no-highlight">65</i>&nbsp;                {
+<i class="no-highlight">66</i>&nbsp;                    HaveMILES=calculations.Subtract(ModifyMILES,0);
+<i class="no-highlight">67</i>&nbsp;                }
+<i class="no-highlight">68</i>&nbsp;                if (ModifyPLAYS&lt;0)
+<i class="no-highlight">69</i>&nbsp;                {
+<i class="no-highlight">70</i>&nbsp;                    HavePLAYS=calculations.Subtract(0,ModifyPLAYS);
+<i class="no-highlight">71</i>&nbsp;                }
+<i class="no-highlight">72</i>&nbsp;
+<i class="no-highlight">73</i>&nbsp;                calculations.View(HaveMILES,HavePLAYS);
+<i class="no-highlight">74</i>&nbsp;
+<i class="no-highlight">75</i>&nbsp;
+<i class="no-highlight">76</i>&nbsp;            }
+<i class="no-highlight">77</i>&nbsp;            else
+<i class="no-highlight">78</i>&nbsp;            {
+<i class="no-highlight">79</i>&nbsp;                System.out.println(restart);
+<i class="no-highlight">80</i>&nbsp;                System.out.print(&quot;please enter (y/n)\n&quot;);
+<i class="no-highlight">81</i>&nbsp;            }
+<i class="no-highlight">82</i>&nbsp;    }
+<i class="no-highlight">83</i>&nbsp;}
+<i class="no-highlight">84</i>&nbsp;
+<i class="no-highlight">85</i>&nbsp;       */
+<i class="no-highlight">86</i>&nbsp;      /*
+<i class="no-highlight">87</i>&nbsp;        System.out.print(&quot;APP Name : VitalMe\n&quot;);
+<i class="no-highlight">88</i>&nbsp;        System.out.print(&quot;APP Description : Vitality&#39;s Active Rewards Programme\n&quot;);
+<i class="no-highlight">89</i>&nbsp;        System.out.print(&quot;Member&#39;s weekly goals based on behavior 3x(Health and Fitness,Driving,Spending)&quot; +
+<i class="no-highlight">90</i>&nbsp;                &quot;   interface\n&quot;);
+<i class="no-highlight">91</i>&nbsp;        System.out.print(&quot;MILES: Must (ADD,SUBTRACT,VIEW)\n&quot;);
+<i class="no-highlight">92</i>&nbsp;        System.out.print(&quot;if () Members complete their weekly goals they are awarded plays on the NEW!!! weekly gameBoard\n&quot;);
+<i class="no-highlight">93</i>&nbsp;        System.out.print(&quot;Start date ,&#39; START Miles &#39; MILES=0 \n&quot;);
+<i class="no-highlight">94</i>&nbsp;        System.out.print(&quot;Plays are not MILES!!\n , PLAYS: are used from previous week only \n&quot;);
+<i class="no-highlight">95</i>&nbsp;        System.out.print(&quot;MILES are hidden under tiles on gameBoard\n:&quot;);
+<i class="no-highlight">96</i>&nbsp;        System.out.print(&quot;Entire gameboard shown once all plays are used\n&quot;);
+<i class="no-highlight">97</i>&nbsp;        System.out.print(&quot;MILES: accumulate and exchanged for reward voucher\n&quot;);
+<i class="no-highlight">98</i>&nbsp;        System.out.print(&quot;reward voucher 2x(partner,category)\n&quot;);
+<i class="no-highlight">99</i>&nbsp;
+<i class="no-highlight">100</i>&nbsp;
+<i class="no-highlight">101</i>&nbsp;       */
+<i class="no-highlight">102</i>&nbsp;
+<i class="no-highlight">103</i>&nbsp;
+<i class="no-highlight">104</i>&nbsp;
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-10-02 15:54</div>
+</div>
+</body>
+</html>
