@@ -1,7 +1,6 @@
 <configuration scan = "true" ScanPeriod="30 seconds">
     <property name="LOG_DIR" value="/NUW/A Directory for the logback intellij/log_output"/>
 
-
     <appender name ="ROLLING_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <files>${LOG_DIG}/AccountSystems.log</files>
         <encoder class ="ch.qos.logback.classic.encoder.PatternLayoutEncoder">

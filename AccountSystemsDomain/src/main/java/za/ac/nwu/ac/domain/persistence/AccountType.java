@@ -18,7 +18,7 @@ import java.util.Set;
 @Setter
 @Getter
 @Entity
-@Table (name = "ACCOUNT_TYPE", schema = "DEMO_SCHEMA")
+@Table (name = "Newdb", schema = "DEMO_SCHEMA")
 public class AccountType implements Serializable
 {
 
