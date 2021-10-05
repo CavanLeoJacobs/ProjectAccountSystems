@@ -1,6 +1,5 @@
 package za.ac.nwu.ac.domain.persistence;
 import lombok.*;
-import za.ac.nwu.ac.domain.dto.AccountTransactionDetailsDto;
 
 import javax.persistence.*;
 import java.io.Serializable;

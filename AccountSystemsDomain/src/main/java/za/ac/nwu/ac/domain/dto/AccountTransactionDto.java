@@ -1,56 +1,58 @@
 package za.ac.nwu.ac.domain.dto;
 
 import za.ac.nwu.ac.domain.persistence.AccountTransaction;
-import za.ac.nwu.ac.domain.persistence.AccountTransactionDetails;
-import za.ac.nwu.ac.domain.persistence.AccountType;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 
 public class AccountTransactionDto implements Serializable {
     private static final long serialVersionUID = -4702910960654155445L;
-    //public boolean getDetails;
-
 
     private Long transactionId;
     private Long memberId;
     private Long amount;
+    private String accountTypeMnenonic;
     private LocalDate transactionDate;
-    private AccountType accountType;
-    private AccountTransactionDetails details;
-    private AccountTransaction createdAccountTransaction;
-
-
-
+    private AccountTransactionDetailsDto details;
     public AccountTransactionDto()
-    {}
-   // public AccountTransactionDto()
-    //{}
-    //public AccountTransactionDto()
-    //{}
-
-
-
-    public AccountTransactionDto(AccountTransaction createdAccountTransaction)
-    {
-
-    }
-    public static void setTransactionId(Object o) {
-    }
-
-    public static Object getAccountTypeMnemonic()
     {
 
     }
 
-    public static AccountTransaction buildAccountTransaction(AccountType accountType) {
-    }
-
-    public boolean getDetails()
+    public AccountTransactionDto(Long transactionId,String accountTypeMnenonic,Long memberId,Long amount,LocalDate transactionDate)
     {
-        //return true;
+        this.memberId=memberId;
+        this.amount=amount;
+        this.transactionDate=transactionDate;
+        this.transactionId=transactionId;
+        this.accountTypeMnenonic=accountTypeMnenonic;
+    }
+    public AccountTransactionDto(Long transactionId,String accountTypeMnenonic,Long memberId,Long amount,LocalDate transactionDate,AccountTransactionDetailsDto details)
+    {
+        this.memberId=memberId;
+        this.amount=amount;
+        this.transactionDate=transactionDate;
+        this.transactionId=transactionId;
+        this.accountTypeMnenonic=accountTypeMnenonic;
+        this.details=details;
     }
 
-  */
+
+
+
+    public AccountTransactionDto(AccountTransaction accountTransaction)
+    {
+        this.memberId=accountTransaction.getMemberId();
+        this.amount=accountTransaction.getAmount();
+        this.transactionDate=accountTransaction.getTransactionDate();
+        this.transactionId=accountTransaction.getTransactionId();
+        this.accountTypeMnenonic=accountTransaction.getAccountType().getMnemonic();
+        if (null != accountTransaction.getDetails()) {
+            this.details = new AccountTransactionDetailsDto(accountTransaction.getDetails());
+        }
+    }
+
+
+
 }
 

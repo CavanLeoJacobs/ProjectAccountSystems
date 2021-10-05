@@ -18,7 +18,7 @@ import javax.transaction.Transactional;
 @Component
 public class CreateAccountTransactionFlowImpl implements CreateAccountTransactionFlow
 {
-    private static final Logger LOGGER = LoggerFactory.getLogger(CreateAccountTransactionFlowImpl.class);
+   private static final Logger LOGGER = LoggerFactory.getLogger(CreateAccountTransactionFlowImpl.class);
     private final AccountTransactionTranslator accountTransactionTranslator;
     private final AccountTransactionDetailsTranslator accountTransactionDetailsTranslator;
     private final FetchAccountTypeFlow fetchAccountTypeFlow;
@@ -41,7 +41,7 @@ public class CreateAccountTransactionFlowImpl implements CreateAccountTransactio
 
         AccountTransaction createdAccountTransaction = accountTransactionTranslator.save(accountTransaction);
 
-        if(null != accountTransactionDto.getDetails())
+        if(accountTransactionDto.getDetails() !=null)
         {
             AccountTransactionDetails accountTransactionDetails =accountTransactionDto.getDetails()
                     .buildAccountTransactionDetails(createdAccountTransaction);
