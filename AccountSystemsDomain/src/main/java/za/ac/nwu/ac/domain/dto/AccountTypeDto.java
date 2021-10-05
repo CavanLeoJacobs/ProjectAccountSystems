@@ -1,7 +1,6 @@
 package za.ac.nwu.ac.domain.dto;
 
 import io.swagger.annotations.ApiModel;
-import lombok.NonNull;
 import za.ac.nwu.ac.domain.persistence.AccountType;
 
 import java.io.Serializable;
@@ -25,7 +24,7 @@ public AccountTypeDto(){}
         this.creationDate=creationDate;
 
     }
-    public AccountTypeDto(@NonNull AccountType accountType)
+    public AccountTypeDto(AccountType accountType)
     {
         this.setAccountTypeName(accountType.getAccountTypeName());
         this.setCreationDate(accountType.getCreationDate());
