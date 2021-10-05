@@ -9,6 +9,7 @@ import java.time.LocalDate;
 
 public class AccountTransactionDto implements Serializable {
     private static final long serialVersionUID = -4702910960654155445L;
+    //public boolean getDetails;
 
 
     private Long transactionId;
@@ -18,7 +19,9 @@ public class AccountTransactionDto implements Serializable {
     private AccountType accountType;
     private AccountTransactionDetails details;
     private AccountTransaction createdAccountTransaction;
- /*
+
+
+
     public AccountTransactionDto()
     {}
    // public AccountTransactionDto()
@@ -27,7 +30,7 @@ public class AccountTransactionDto implements Serializable {
     //{}
 
 
- */
+
     public AccountTransactionDto(AccountTransaction createdAccountTransaction)
     {
 
@@ -45,7 +48,9 @@ public class AccountTransactionDto implements Serializable {
 
     public boolean getDetails()
     {
-        return true;
+        //return true;
     }
+
+  */
 }
 
