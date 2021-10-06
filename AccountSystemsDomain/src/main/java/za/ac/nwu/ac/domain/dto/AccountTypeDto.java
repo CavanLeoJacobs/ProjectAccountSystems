@@ -1,6 +1,7 @@
 package za.ac.nwu.ac.domain.dto;
 
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import za.ac.nwu.ac.domain.persistence.AccountType;
 
 import java.io.Serializable;
@@ -31,8 +32,7 @@ public AccountTypeDto(){}
         this.setMnemonic(accountType.getMnemonic());
     }
 
-  //  @ApiModelProperty(position=1
-   // value= ("AccountType.Mnemonic"));
+    @ApiModelProperty(position=1 ,value = ("AccountType.Mnemonic"))
 
 
     public String getMnemonic() {

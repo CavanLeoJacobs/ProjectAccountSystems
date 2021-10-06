@@ -92,7 +92,7 @@ public class AccountTransaction implements Serializable
         if (this == o) return true;
         if (o == null ||getClass()!=o.getClass())return false;// org.hibernate.Hibernate.getClass(this) != org.hibernate.Hibernate.getClass(o)) return false;
         AccountTransaction that = (AccountTransaction) o;
-        return Objects.equals(transactionId, that.transactionId) && Objects.equals(accountType,that.accountType) && Objects.equals(memberId,that.memberId)&& Objects.equals(amount,that.amount)&& Objects.equals(accountType,that.accountType)&& Objects.equals(transactionDate,that.transactionDate);
+        return Objects.equals(transactionId, that.transactionId) && Objects.equals(memberId,that.memberId)&& Objects.equals(amount,that.amount)&& Objects.equals(accountType,that.accountType)&& Objects.equals(transactionDate,that.transactionDate);
     }
 
     @Override
