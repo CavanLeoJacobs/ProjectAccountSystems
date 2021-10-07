@@ -13,12 +13,13 @@ import java.util.Objects;
 import java.util.Set;
 
 
+
 @EqualsAndHashCode
 @ToString
 @Setter
 @Getter
 @Entity
-@Table (name = "Newdb", schema = "DEMO_SCHEMA")
+@Table (name = "VitalMe", schema = "DEMO_SCHEMA")
 public class AccountType implements Serializable
 {
 
@@ -77,7 +78,6 @@ public class AccountType implements Serializable
     {
     return accountTransactions;
       }
-
     public void  setAccountTransactions(Set<AccountTransaction> accountTransactions) {
         this.accountTransactions = accountTransactions;
     }
@@ -91,7 +91,6 @@ public class AccountType implements Serializable
     public void setAccountTypeName(String accountTypeName) {
         this.accountTypeName = accountTypeName;
     }
-
     public void setCreationDate(LocalDate creationDate) {
         this.creationDate = creationDate;
     }

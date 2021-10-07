@@ -29,6 +29,8 @@ public class CreateAccountTransactionFlowImplTest {
     @Test
     public void create()
     {
+
         flow.create(new AccountTransactionDto());
     }
 }
+

@@ -25,6 +25,7 @@ public class CreateAccountTypeFlowImplTest  {
     @After
     public void tearDown() throws Exception {
     }
+
     @Test
     public void create()
     {
