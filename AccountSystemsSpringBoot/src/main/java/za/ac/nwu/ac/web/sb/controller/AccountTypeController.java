@@ -29,13 +29,10 @@ public class AccountTypeController {
             @ApiResponse(code = 400, message = "Bad Request", response = GeneralResponse.class),
             @ApiResponse(code = 404, message = "Not found", response = GeneralResponse.class),
             @ApiResponse(code = 500, message = "Internal Server Error", response = GeneralResponse.class),
-    }
-
-
-    )
+    })
 
     public ResponseEntity<GeneralResponse<List<AccountTypeDto>>> getAll() {
-        List<AccountTypeDto> accountTypes = fetchAccountTypeFlow.etAllAccountTypes();
+        List<AccountTypeDto> accountTypes = fetchAccountTypeFlow.getAllAccountTypes();
         GeneralResponse<List<AccountTypeDto>> response = new GeneralResponse<List<AccountTypeDto>>(true, accountTypes);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
@@ -43,8 +40,6 @@ public class AccountTypeController {
     public GeneralResponse<String> GetAll() {
         return new GeneralResponse<String>(true, "No Types Found");
     }
-
-
     @Autowired
     public AccountTypeController(FetchAccountTypeFlow fetchAccountTypeFlow) {
         this.fetchAccountTypeFlow = fetchAccountTypeFlow;

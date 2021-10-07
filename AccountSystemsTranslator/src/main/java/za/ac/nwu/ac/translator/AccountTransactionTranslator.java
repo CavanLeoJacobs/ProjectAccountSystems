@@ -9,5 +9,5 @@ public interface AccountTransactionTranslator
 {
     List<AccountTransactionDto> getAll();
 
-    AccountTransactionDto create(AccountTransactioneDto accountTransaction);
+    //AccountTransactionDto create(AccountTransactioneDto accountTransaction);
 }

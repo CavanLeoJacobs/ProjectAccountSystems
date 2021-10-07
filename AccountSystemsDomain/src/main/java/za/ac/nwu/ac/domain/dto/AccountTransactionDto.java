@@ -48,7 +48,7 @@ public class AccountTransactionDto implements Serializable {
         this.transactionId=accountTransaction.getTransactionId();
         this.accountTypeMnenonic=accountTransaction.getAccountType().getMnemonic();
         if (null != accountTransaction.getDetails()) {
-            this.details = new AccountTransactionDetailsDto(accountTransaction.getDetails());
+          //  this.details = new AccountTransactionDetailsDto(accountTransaction.getDetails());
         }
     }
 

@@ -1,16 +1,7 @@
 package za.ac.nwu.ac.logic.flow.impl;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-import za.ac.nwu.ac.domain.dto.AccountTransactionDto;
-import za.ac.nwu.ac.domain.persistence.AccountTransaction;
-import za.ac.nwu.ac.domain.persistence.AccountTransactionDetails;
-import za.ac.nwu.ac.domain.persistence.AccountType;
 import za.ac.nwu.ac.logic.flow.CreateAccountTransactionFlow;
-import za.ac.nwu.ac.logic.flow.FetchAccountTypeFlow;
-import za.ac.nwu.ac.translator.AccountTransactionDetailsTranslator;
-import za.ac.nwu.ac.translator.AccountTransactionTranslator;
 
 import javax.transaction.Transactional;
 
@@ -18,6 +9,7 @@ import javax.transaction.Transactional;
 @Component
 public class CreateAccountTransactionFlowImpl implements CreateAccountTransactionFlow
 {
+    /*
    private static final Logger LOGGER = LoggerFactory.getLogger(CreateAccountTransactionFlowImpl.class);
     private final AccountTransactionTranslator accountTransactionTranslator;
     private final AccountTransactionDetailsTranslator accountTransactionDetailsTranslator;
@@ -40,14 +32,13 @@ public class CreateAccountTransactionFlowImpl implements CreateAccountTransactio
         AccountTransaction accountTransaction = accountTransactionDto.buildAccountTransaction(accountType);
 
         AccountTransaction createdAccountTransaction = accountTransactionTranslator.save(accountTransaction);
-        if(accountTransactionDto.getDetails() !=null)
+       // if(accountTransactionDto.getDetails() !=null)
         {
             AccountTransactionDetails accountTransactionDetails =accountTransactionDto.getDetails()
                     .buildAccountTransactionDetails(createdAccountTransaction);
             createdAccountTransaction.setDetails(accountTransactionDetails);
-            accountTransactionDetailsTranslator.save(createdAccountTransaction.getDetails());
+        //    accountTransactionDetailsTranslator.save(createdAccountTransaction.getDetails());
         }
-
         AccountTransactionDto results = new AccountTransactionDto(createdAccountTransaction);
         LOGGER.info("the return object is{}",results);
 
@@ -55,5 +46,6 @@ public class CreateAccountTransactionFlowImpl implements CreateAccountTransactio
     }
 
 
-
+     */
 }
+
